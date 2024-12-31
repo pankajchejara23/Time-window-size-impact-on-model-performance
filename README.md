@@ -18,23 +18,27 @@ For more details, refer to the [full paper]([https://doi.org/XXXXXXX](https://do
 
 ---
 
-## 🚀 Getting Started
+## 🧪 Methodology
 
-### Prerequisites
-Ensure you have the following installed:
-- Python 3.8+
-- Required Python libraries (see [requirements.txt](requirements.txt))
+*Dataset and Feature Extraction*
 
-### Installation
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/pankajchejara23/Time-window-size-impact-on-model-performance.git
-   cd Time-window-size-impact-on-model-performance
-   ```
-2. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
+The study utilized multimodal datasets collected from collaborative learning activities in diverse classroom settings. These datasets included audio and log data, from which features such as speaking time, turn-taking, and writing activity metrics were extracted. Group-level features were computed using statistics like mean and standard deviation.
+
+*Window Size Segmentation*
+
+To investigate the impact of time window size, data was segmented into windows of varying lengths (30s, 60s, 90s, 120s, 180s, and 240s). Labels for each window were assigned based on the majority annotation within the segment.
+
+*Model Development*
+
+Random forest classifiers were employed to model collaboration quality and its dimensions. The choice of random forest was driven by its proven performance in MMLA tasks. Models were evaluated using:
+
+* 10-fold Cross-Validation (CV): Assesses within-context generalizability.
+
+* Leave-One-Context-Out Validation: Measures across-context generalizability.
+
+*Evaluation Metric*
+
+The Area Under the Receiver Operating Characteristic Curve (AUC) was used to evaluate model performance, providing a robust measure of prediction quality.
 
 ---
 
