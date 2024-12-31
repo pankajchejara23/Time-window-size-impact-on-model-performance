@@ -1,31 +1,85 @@
-# ![banner](./banner.png)
+# **Impact of Time Window Size on Model Performance**
+This repository contains the source code and supplementary materials for the research paper:
+
+"Impact of Window Size on the Generalizability of Collaboration Quality Estimation Models Developed Using Multimodal Learning Analytics."
+The research investigates how varying time window sizes affect the performance and generalizability of machine learning models for collaboration quality estimation using multimodal data.
+
+**🎖️ Honorable Mention:** This paper received an **Honorable Mention award (top 5% of submissions)** at the prestigious Learning Analytics and Knowledge (LAK'23) conference.
+
+[![DOI](https://zenodo.org/badge/doi/10.1145/ACM.3576050.svg)](https://doi.org/10.1145/3576050.3576143)
+
+---
+
+## 📜 Abstract
+Multimodal Learning Analytics (MMLA) leverages diverse data sources to assess collaboration quality in educational settings. A key question addressed in this study is how the choice of time window size impacts the generalizability of these models across different contexts. Using audio and log data, our findings reveal optimal window sizes for various collaboration dimensions, with significant implications for MMLA research and practice.
+
+For more details, refer to the [full paper]([https://doi.org/XXXXXXX](https://doi.org/10.1145/3576050.3576143)).
 
 
-#### Impact of window size on the generalizability of collaboration qualityestimation models developed using Multimodal Learning Analytics
+---
 
-This repository contains source code for data analysis for LAK 2023 reserach paper where audio and log data were used to model collaboration quality (and its dimensions). The paper investigated how different temporal window sizes affect the model's performance, not only within the learning context but also across different learning contexts.
+## 🚀 Getting Started
+
+### Prerequisites
+Ensure you have the following installed:
+- Python 3.8+
+- Required Python libraries (see [requirements.txt](requirements.txt))
+
+### Installation
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/pankajchejara23/Time-window-size-impact-on-model-performance.git
+   cd Time-window-size-impact-on-model-performance
+   ```
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+---
 
 
+## 📊 Results
 
-##### Abstract
+Key findings:
+- **Collaboration Quality & Argumentation:** Optimal performance with a **60-second window size**.
+- **Other Dimensions (e.g., Coordination, Information Processing):** Best performance with 180-second windows.
+- **Across-context Generalizability:** Models trained with larger windows (e.g., 180s) exhibit higher generalizability across diverse learning settings.
 
-Multimodal Learning Analytics (MMLA) has been applied to collaborative learning, often to estimate collaboration quality with the use of multimodal data, which often have uneven time scales. The difference in time scales is handled by dividing and aggregating data using a fixed-size time window. The current MMLA research lacks the systematic exploration of whether and how much the window size affects the generalizability of the collaboration quality estimation model. In this paper, we investigate the impact of different window sizes (e.g., 30 seconds, 60s, 90s, 120s, 180s, 240s) on the generalizability of classification models for collaboration quality and its underlying dimensions (e.g., argumentation). Our results from an MMLA study involving the use of audio and log data showed that a 60 seconds window size enabled the development of more generalizable models for collaboration quality (AUC 61%) and argumentation (AUC 64%). While for modeling dimensions focusing on coordination, interpersonal relationship, and joint information processing, a window size of 180 seconds led to better performance in terms of across-context generalizability (on average from 56% AUC to 63% AUC). The findings have implications for the eventual application of MMLA in authentic practice
+---
+
+## 📖 Citation
+If you use this code in your research, please cite:
+
+```bibtex
+@inproceedings{10.1145/3576050.3576143,
+author = {Chejara, Pankaj and Prieto, Luis P. and Rodriguez-Triana, Maria Jesus and Ruiz-Calleja, Adolfo and Khalil, Mohammad},
+title = {Impact of window size on the generalizability of collaboration quality estimation models developed using Multimodal Learning Analytics},
+year = {2023},
+isbn = {9781450398657},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3576050.3576143},
+doi = {10.1145/3576050.3576143},
+booktitle = {LAK23: 13th International Learning Analytics and Knowledge Conference},
+pages = {559–565},
+numpages = {7},
+keywords = {Collaboration Quality, Generalizability, Machine Learning, MultiModal Learning Analytics, Temporal Window},
+location = {Arlington, TX, USA},
+series = {LAK2023}
+}
+```
 
 
+---
 
-##### Modeling
+## 📧 Contact
+For questions or further information, contact:
+- **Pankaj Chejara**: [pankajch@tlu.ee](mailto:pankajch@tlu.ee)
 
-![model](./model.png)
+---
 
-##### Results
-
-Window size impact on the performance of collaboration quality model. Check paper for more results.
-
-![CQ_lak23_window_auc](./CQ_lak23_window_auc.png)
-
-
-
-#### License
+## 📝 License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the  "Software"), to deal in the Software without restriction, including  without limitation the rights to use, copy, modify, merge, publish,  distribute, sublicense, and/or sell copies of the Software, and to  permit persons to whom the Software is furnished to do so, subject to  the following conditions:
 
